@@ -105,7 +105,7 @@ namespace FullStak.Lotfi.Shop.UI
         private static void ShowCustomerMenu()
         {
             Console.Clear();
-            Console.WriteLine("Customer Manager ...");
+            Console.WriteLine("Customer Manager ---");
             Console.WriteLine("--------------------");
             Console.WriteLine("1-Add");
             Console.WriteLine("2-Update");
