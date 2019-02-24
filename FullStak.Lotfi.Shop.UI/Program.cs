@@ -1,20 +1,27 @@
-﻿using System;
+﻿using FullStak.Lotfi.Shop.DalEF.Repositories;
+using System;
+using Microsoft.Extensions.DependencyInjection;
+using FullStak.Lotfi.Shop.DalEF;
+using FullStak.Lotfi.Shop.Core.Contracts.Repositories;
 
 namespace FullStak.Lotfi.Shop.UI
 {
     class Program
     {
+        static ServiceProvider serviceProvider;
         static void Main(string[] args)
         {
+            RegisterServices();
+
             string input = "";
-            while (input!="4")
+            while (input != "4")
             {
                 ShowMainMenu();
                 Console.Write("Please Enter Your Operation Number:");
                 input = Console.ReadLine();
                 switch (input)
                 {
-                    case "1": ManageCustomers();break;
+                    case "1": ManageCustomers(); break;
                     case "2": ManageProduct(); break;
                     case "3": break;
                     default:
@@ -22,6 +29,15 @@ namespace FullStak.Lotfi.Shop.UI
                         break;
                 }
             }
+        }
+
+        private static void RegisterServices()
+        {
+            serviceProvider = new ServiceCollection()
+            .AddScoped<StoreContext,StoreContext>()
+            .AddScoped<ICustomerRepository, CustomerRepository>()
+            .AddScoped<CustomerService, CustomerService>()
+            .BuildServiceProvider(); ;
         }
 
         private static void ManageProduct()
@@ -67,6 +83,7 @@ namespace FullStak.Lotfi.Shop.UI
 
         private static void ManageCustomers()
         {
+            CustomerService customerService = serviceProvider.GetService<CustomerService>();
             string input = "";
             while (input != "5")
             {
@@ -75,26 +92,15 @@ namespace FullStak.Lotfi.Shop.UI
                 input = Console.ReadLine();
                 switch (input)
                 {
-                    case "1": break;
-                    case "2": break;
-                    case "3": break;
-                    case "4": break;
+                    case "1": customerService.AddNewCusmtomer(); break;
+                    case "2": customerService.ModifyCusmtomer(); break;
+                    case "3": customerService.DeleteCusmtomer(); break;
+                    case "4": customerService.ShowAllCusmtomer(); break;
                     default:
                         Console.WriteLine("Invalid Input...!");
                         break;
                 }
             }
-        }
-
-        private static void ShowMainMenu()
-        {
-            Console.Clear();
-            Console.WriteLine("--------------------");
-            Console.WriteLine("1-Customer Manager");
-            Console.WriteLine("2-Product Manager");
-            Console.WriteLine("3-Shopping");
-            Console.WriteLine("4-Exit");
-            Console.WriteLine("--------------------");
         }
         private static void ShowCustomerMenu()
         {
@@ -106,6 +112,17 @@ namespace FullStak.Lotfi.Shop.UI
             Console.WriteLine("3-Delete");
             Console.WriteLine("4-Show All");
             Console.WriteLine("5-------Back To Main");
+            Console.WriteLine("--------------------");
+        }
+
+        private static void ShowMainMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("--------------------");
+            Console.WriteLine("1-Customer Manager");
+            Console.WriteLine("2-Product Manager");
+            Console.WriteLine("3-Shopping");
+            Console.WriteLine("4-Exit");
             Console.WriteLine("--------------------");
         }
     }

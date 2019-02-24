@@ -7,7 +7,7 @@ using System.Text;
 
 namespace FullStak.Lotfi.Shop.DalEF.Repositories
 {
-    class CustomerRepository : ICustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly StoreContext _storeContext;
 
