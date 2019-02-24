@@ -8,7 +8,7 @@ namespace FullStak.Lotfi.Shop.DalEF.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.Property(c => c.Title).IsRequired();
+            builder.Property(c => c.Title).IsRequired().HasMaxLength(50);
         }
     }
 
