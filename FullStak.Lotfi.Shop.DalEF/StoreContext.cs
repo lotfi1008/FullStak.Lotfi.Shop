@@ -14,7 +14,7 @@ namespace FullStak.Lotfi.Shop.DalEF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Initial Catalog=LotfiStoreDB;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-DPJGB00\\MSSQL2017;Initial Catalog=LotfiStoreDB;Integrated Security=True;");
             base.OnConfiguring(optionsBuilder); 
         }
 

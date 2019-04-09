@@ -1,10 +1,10 @@
-﻿using FullStak.Lotfi.Shop.Core.Contracts.Repositories;
-using FullStak.Lotfi.Shop.Core.Entities;
+﻿using FullStak.Lotfi.Shop.Contracts.Repositories;
+using FullStak.Lotfi.Shop.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FullStak.Lotfi.Shop.UI
+namespace FullStak.Lotfi.Shop.Domain.ApplicationService.CustomerService
 {
     public class CustomerService
     {

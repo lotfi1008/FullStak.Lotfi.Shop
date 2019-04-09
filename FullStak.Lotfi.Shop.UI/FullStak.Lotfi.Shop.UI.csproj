@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FullStak.Lotfi.Shop.Core\FullStak.Lotfi.Shop.Core.csproj" />
     <ProjectReference Include="..\FullStak.Lotfi.Shop.DalEF\FullStak.Lotfi.Shop.DalEF.csproj" />
   </ItemGroup>
 

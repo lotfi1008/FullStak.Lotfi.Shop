@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>FullStak.Lotfi.Shop.Domain.Contracts</AssemblyName>
+    <RootNamespace>FullStak.Lotfi.Shop.Domain.Contracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FullStak.Lotfi.Shop.Entities\FullStak.Lotfi.Shop.Domain.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
