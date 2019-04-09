@@ -1,9 +1,6 @@
-﻿using FullStak.Lotfi.Shop.Core.Entities;
+﻿using FullStak.Lotfi.Shop.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FullStak.Lotfi.Shop.DalEF.Configurations
 {

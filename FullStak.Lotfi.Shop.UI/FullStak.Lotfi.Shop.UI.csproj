@@ -10,7 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FullStak.Lotfi.Shop.Contracts\FullStak.Lotfi.Shop.Domain.Contracts.csproj" />
     <ProjectReference Include="..\FullStak.Lotfi.Shop.DalEF\FullStak.Lotfi.Shop.DalEF.csproj" />
+    <ProjectReference Include="..\FullStak.Lotfi.Shop.Domain.ApplicationService\FullStak.Lotfi.Shop.Domain.ApplicationService.csproj" />
   </ItemGroup>
 
 </Project>

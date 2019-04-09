@@ -2,7 +2,8 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using FullStak.Lotfi.Shop.DalEF;
-using FullStak.Lotfi.Shop.Core.Contracts.Repositories;
+using FullStak.Lotfi.Shop.Contracts.Repositories;
+using FullStak.Lotfi.Shop.Domain.ApplicationService.CustomerService;
 
 namespace FullStak.Lotfi.Shop.UI
 {

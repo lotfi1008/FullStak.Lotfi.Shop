@@ -1,5 +1,5 @@
-﻿using FullStak.Lotfi.Shop.Core.Entities;
-using FullStak.Lotfi.Shop.DalEF.Configurations;
+﻿using FullStak.Lotfi.Shop.DalEF.Configurations;
+using FullStak.Lotfi.Shop.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FullStak.Lotfi.Shop.DalEF

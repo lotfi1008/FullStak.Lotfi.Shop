@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FullStak.Lotfi.Shop.Contracts\FullStak.Lotfi.Shop.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\FullStak.Lotfi.Shop.Entities\FullStak.Lotfi.Shop.Domain.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

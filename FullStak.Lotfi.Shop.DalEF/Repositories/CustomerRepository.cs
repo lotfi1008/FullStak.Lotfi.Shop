@@ -1,9 +1,9 @@
-﻿using FullStak.Lotfi.Shop.Core.Contracts.Repositories;
-using FullStak.Lotfi.Shop.Core.Entities;
+﻿using FullStak.Lotfi.Shop.Contracts.Repositories;
+using FullStak.Lotfi.Shop.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Xml.Linq;
 
 namespace FullStak.Lotfi.Shop.DalEF.Repositories
 {
